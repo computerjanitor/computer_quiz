@@ -1,0 +1,74 @@
+### Idea is to ask the user a bunch of questions ###
+### If they get an answer correct, we add 1 point to their score ###
+### At the end of the program, we'll print out what their score was out of the total ###
+
+### Welcome screen ###
+print("Welcome to my computer quiz!")
+
+playing = input("Do you want to play? ")
+if playing.lower() != "yes":
+	quit()
+
+print("Okay! Let's play.")
+
+counter = 0
+total = 0
+
+### Question 1 ###
+answer = input("What does CPU stand for? ")
+if answer.lower() == "central processing unit":
+	print("Correct!")
+	counter = counter + 1
+	total = total + 1
+else:
+	print("Incorrect!")
+	total = total + 1
+
+### Question 2 ###
+answer = input("What does RAM stand for? ")
+if answer.lower() == "random access memory":
+	print("Correct!")
+	counter = counter + 1
+	total = total + 1
+else:
+	print("Incorrect!")
+	total = total + 1
+
+### Question 3 ###
+answer = input("What does GPU stand for? ")
+if answer.lower() == "graphics processing unit":
+	print("Correct!")
+	counter = counter + 1
+	total = total + 1
+else:
+	print("Incorrect!")
+	total = total + 1
+
+### Question 4 ###
+answer = input("What does PSU stand for? ")
+if answer.lower() == "power supply unit":
+	print("Correct!")
+	counter = counter + 1
+	total = total + 1
+else:
+	print("Incorrect!")
+	total = total + 1
+
+### Question 5 ###
+answer = input("What does USB stand for? ")
+if answer.lower() == "universal serial bus":
+	print("Correct!")
+	counter = counter + 1
+	total = total + 1
+else:
+	print("Incorrect!")
+	total = total + 1
+
+grade = (counter / total) * 100
+
+print("You got " + str(grade) + " % correct.")
+
+if grade <= 60:
+	print("You have failed this quiz. Please try again.")
+else:
+	print("Congratulations! You have passed the quiz.")
